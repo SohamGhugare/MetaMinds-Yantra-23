@@ -15,6 +15,7 @@ func init() {
 
 	initializers.LoadEnvVars()
 	initializers.ConnectUserDatabase()
+	initializers.SyncSchema()
 
 }
 
