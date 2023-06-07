@@ -1,8 +1,6 @@
 package models
 
 import (
-	"time"
-
 	"gorm.io/gorm"
 )
 
@@ -12,13 +10,8 @@ type Event struct {
 	Title       string
 	Description string
 
+	VenueID    uint
 	Venue      Venue
-	Volunteers []Volunteer
-	Timings    Time
-}
-
-// Time model
-type Time struct {
-	Start time.Time
-	End   time.Time
+	Volunteers []Volunteer `gorm:"many2many:event_volunteers;"`
+	Timings    EventTime
 }
