@@ -1,0 +1,41 @@
+:root {
+  --white: #F5F5F5;
+  --dark: #202124;
+  --textdark: #3a3e41;
+  --red: #ea4335;
+  --yellow: #fbbc04;
+  --blue: #4285f4;
+  --green: #34a853;
+}
+
+@font-face {
+  font-family: "Pacifico";
+  src: url("../../fonts/Pacifico-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.App-header {
+  background-color: var(--white);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
