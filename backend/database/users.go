@@ -29,3 +29,11 @@ func CreateUser(user *models.User) error {
 
 	return nil
 }
+
+func FindUserByUID(uid int, dest *models.User) error {
+	initializers.DatabaseClient.First(dest, uid)
+	if dest.ID == 0 {
+		return errors.New("uid not found")
+	}
+	return nil
+}

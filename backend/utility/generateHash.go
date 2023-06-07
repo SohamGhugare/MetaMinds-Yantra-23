@@ -10,3 +10,9 @@ func GenerateHash(password string) (string, error) {
 	}
 	return string(hash), nil
 }
+
+// Verifying hash
+func VerifyHash(hash, password string) error {
+	err := bcrypt.CompareHashAndPassword([]byte(hash), []byte(password))
+	return err
+}
