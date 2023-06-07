@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import Venues from "../components/cards/Venues";
 import Navbar from "../components/navbar/Navbar";
 import VenueBox from "../components/venueBox/VenueBox";
 import "./Home.css";
@@ -11,12 +13,15 @@ const Home = () => {
         <div className="heroImg"></div>
       </div>
       <div className="venues">
-        <VenueBox name="Hall" />
+        <Link to="/halls">
+          <VenueBox name="Hall" />
+        </Link>
         <VenueBox name="Lawns" />
         <VenueBox name="Garages" />
         <VenueBox name="Labs" />
         <VenueBox name="Auditorium" />
       </div>
+      <Venues />
     </div>
   );
 };

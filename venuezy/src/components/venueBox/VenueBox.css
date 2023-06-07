@@ -9,7 +9,7 @@
     height: 5rem;
     width: 10rem;
     background: var(--white);
-    box-shadow: -10px 14px 55px rgba(0, 0, 0, 0.25);
+    box-shadow: -10px 14px 55px rgba(0, 0, 0, 0.20);  
     border-radius: 15px;
     display: flex;
     justify-content: center;
@@ -21,5 +21,6 @@
 
 .box:hover{
     cursor: pointer;
-    background-color: #DEBFA4;;
+    background-color: #DEBFA4;
+    box-shadow: -10px 14px 55px rgba(0, 0, 0, 0.25); 
 }
