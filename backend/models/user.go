@@ -8,6 +8,6 @@ type User struct {
 	Name     string
 	Email    string
 	Password string
-	Phone    string
-	IDProof  string
+	Phone    int
+	UID      int
 }

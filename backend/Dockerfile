@@ -1,4 +1,4 @@
-FROM golang:1.20.4-alpine3.18
+FROM golang:alpine
 
 RUN mkdir -p /backend
 WORKDIR /backend
@@ -11,6 +11,12 @@ RUN go mod download
 
 # Copying all the files
 COPY . .
+
+# Enable CGO
+ENV CGO_ENABLED=1
+
+# Install the required build dependencies
+RUN apk add build-base
 
 # Building the application
 RUN go build -o main .
