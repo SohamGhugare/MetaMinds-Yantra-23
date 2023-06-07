@@ -1,9 +1,18 @@
 package main
 
-import "github.com/gin-gonic/gin"
+import (
+	"log"
+	"venuezy/initializers"
+
+	"github.com/gin-gonic/gin"
+)
 
 // Calling initializers
 func init() {
+
+	log.SetPrefix("[VENUEZY] ")
+
+	initializers.LoadEnvVars()
 
 }
 
