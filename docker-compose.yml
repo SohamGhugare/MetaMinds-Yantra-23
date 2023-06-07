@@ -1,0 +1,25 @@
+version: "3"
+
+services:
+  backend:
+    build: backend
+    image: golang:1.20.4-alpine3.18
+    ports:
+      - "8081:8081"
+    depends_on:
+      - db
+  db:
+    build: db
+    image: postgres:alpine
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - db:/var/lib/postgresql/data
+
+volumes:
+  db:
+    driver: local
