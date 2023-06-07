@@ -1,9 +1,9 @@
 import {Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
-import SigninPage from "./pages/patient/SigninPage";
-import SignupPage from "./pages/patient/SignupPage";
-import SigninPageDoc from "./pages/doctor/SigninPage";
-import SignupPageDoc from "./pages/doctor/SignupPage";
+import SigninPage from "./pages/user/SigninPage";
+import SignupPage from "./pages/user/SignupPage";
+import SigninPageDoc from "./pages/enlister/SigninPage";
+import SignupPageDoc from "./pages/enlister/SignupPage";
 
 
 function App() {
@@ -11,10 +11,10 @@ function App() {
    
     <Routes>
       <Route path="/" element={<HomePage />}/>
-      <Route path="/patient/login" element={<SigninPage/>}/>
-      <Route path="/patient/register" element={<SignupPage/>}/>
-      <Route path="/doctor/login" element={<SigninPageDoc/>}/>
-      <Route path="/doctor/register" element={<SignupPageDoc/>}/>
+      <Route path="/user/login" element={<SigninPage/>}/>
+      <Route path="/user/register" element={<SignupPage/>}/>
+      <Route path="/enlister/login" element={<SigninPageDoc/>}/>
+      <Route path="/enlister/register" element={<SignupPageDoc/>}/>
     </Routes>
   
   );

@@ -1,18 +1,18 @@
 import React from 'react'
+import Signup from '../../components/Auth/User/Signup'
 import Welcome from '../../components/common/Welcome'
-import Login from '../../components/Auth/Patient/Login'
 
-const SigninPage = () => {
-    return (
-        <div className="flex h-screen">
+const SignupPage = () => {
+  return (
+    <div className="flex h-screen">
             <div className="flex-1">
                 <Welcome/>
             </div>
             <div className="flex-1">
-                <Login/>
+                <Signup/>
             </div>
         </div>
-    )
+  )
 }
 
-export default SigninPage
+export default SignupPage

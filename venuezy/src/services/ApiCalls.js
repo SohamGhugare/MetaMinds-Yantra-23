@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const commonRequest = async (methods, url, body, header) => {
+export const commonrequest = async (methods, url, body, header) => {
   let config = {
     method: methods,
     url,
