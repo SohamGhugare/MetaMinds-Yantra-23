@@ -13,7 +13,7 @@ const ItWorks = () => {
           How it <span style={{ color: "#DEBFA4" }}>Works</span>
         </h1>
         <p className="titleText">
-          Don’t Worry, We’ll keep it very simple. Get started
+          Don't Worry, We'll keep it very simple. Get started
         </p>
       </div>
       <div className="speakers">

@@ -14,7 +14,7 @@ const Cards = (props) => {
         </div>
       </div>
       <h3>
-        {props.designation.split("\\n").map((line) => (
+        {props.designation?.split("\\n").map((line) => (
           <p>{line}</p>
         ))}
       </h3>
