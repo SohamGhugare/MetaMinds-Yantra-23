@@ -12,7 +12,6 @@ type Event struct {
 	Title       string
 	Description string
 
-	// Relationship fields
 	Venue      Venue
 	Volunteers []Volunteer
 	Timings    Time
