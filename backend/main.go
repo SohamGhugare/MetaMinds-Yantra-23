@@ -4,6 +4,7 @@ import (
 	"log"
 	"net/http"
 	"venuezy/controllers"
+	"venuezy/database"
 	"venuezy/initializers"
 
 	"github.com/gin-gonic/gin"
@@ -16,7 +17,7 @@ func init() {
 
 	initializers.LoadEnvVars()
 	initializers.ConnectUserDatabase()
-	initializers.SyncSchema()
+	database.SyncSchema()
 
 }
 

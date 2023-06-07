@@ -32,6 +32,7 @@ func SignupUser(c *gin.Context) {
 	}
 	if err := database.CreateUser(&user); err != nil {
 		exceptions.ThrowException(c, http.StatusInternalServerError, err, "failed to create user")
+		return
 	}
 
 	c.JSON(http.StatusCreated, gin.H{
