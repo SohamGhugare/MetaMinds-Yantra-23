@@ -1,0 +1,16 @@
+.bg{
+    background: linear-gradient(70.08deg, #02937C 3.45%, #A4C2DE 94.51%);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.leftText{
+    /* border: 1px solid red; */
+}
+
+.venuezy{
+    font-family: 'Pacifico' !important;
+}

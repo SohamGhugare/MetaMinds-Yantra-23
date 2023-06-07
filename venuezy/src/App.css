@@ -1,20 +1,22 @@
-.App {
-  text-align: center;
+:root {
+  --white: #F5F5F5;
+  --dark: #202124;
+  --textdark: #3a3e41;
+  --peach:#DEBFA4;
+  --yellow: #fbbc04;
+  --blue: #4285f4;
+  --green: #34a853;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: "Pacifico";
+  src: url("../../fonts/Pacifico-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: var(--white);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -36,3 +38,4 @@
     transform: rotate(360deg);
   }
 }
+
