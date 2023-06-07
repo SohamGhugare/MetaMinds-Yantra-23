@@ -3,19 +3,20 @@ package initializers
 import (
 	"log"
 
-	"gorm.io/driver/postgres"
+	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
 )
 
-var UserClient *gorm.DB
+var DatabaseClient *gorm.DB
 
 func ConnectUserDatabase() {
 	log.Println("connecting to user database...")
-	dsn := "host=db user=postgres password=postgres dbname=postgres port=5432 sslmode=disable"
-	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
+	// dsn := "host=db user=postgres password=postgres dbname=postgres port=5432 sslmode=disable"
+	// db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
+	db, err := gorm.Open(sqlite.Open("data/data.db"), &gorm.Config{})
 	if err != nil {
 		log.Fatalf("error: failed to connect to database, %v", err)
 	}
-	UserClient = db
-	log.Println("successfully connected to user database...")
+	DatabaseClient = db
+	log.Println("successfully connected to user database.")
 }
