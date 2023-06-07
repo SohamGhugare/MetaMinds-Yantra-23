@@ -5,6 +5,7 @@ import (
 	"venuezy/database"
 	"venuezy/exceptions"
 	"venuezy/models"
+	"venuezy/utility"
 
 	"github.com/gin-gonic/gin"
 )
@@ -20,13 +21,19 @@ func SignupUser(c *gin.Context) {
 	}
 
 	if err := c.Bind(&body); err != nil {
-		exceptions.ThrowException(c, http.StatusInternalServerError, err, "invalid request body")
+		exceptions.ThrowException(c, http.StatusBadRequest, err, "invalid request body")
+	}
+
+	hash, err := utility.GenerateHash(body.Password)
+
+	if err != nil {
+		exceptions.ThrowException(c, http.StatusInternalServerError, err, "unable to hash password")
 	}
 
 	user := models.User{
 		Name:     body.Name,
 		Email:    body.Email,
-		Password: body.Password,
+		Password: hash,
 		Phone:    body.Phone,
 		UID:      body.UID,
 	}
