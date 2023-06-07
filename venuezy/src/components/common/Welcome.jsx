@@ -7,7 +7,7 @@ import dot2 from "../../assets/dot_2.png";
 
 const Welcome = () => {
   return (
-    <div className=" bg-gradient-to-br from-green-900 via-green-600 to-green-300">
+    <div className=" bg-gradient-to-br from-blue-900 via-green-600 to-green-300">
       <div className=" flex flex-row justify-evenly items-center h-screen">
         <div className="font-sans flex flex-col items-start justify-start">
           <text className="text-6xl font-bold text-white mb-20">
