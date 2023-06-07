@@ -1,6 +1,6 @@
 FROM golang:1.20.4-alpine3.18
 
-RUN mkdir /backend
+RUN mkdir -p /backend
 WORKDIR /backend
 
 # Copying the manifests
