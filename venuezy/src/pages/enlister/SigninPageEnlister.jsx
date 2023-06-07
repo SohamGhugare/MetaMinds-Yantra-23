@@ -1,18 +1,18 @@
 import React from 'react'
 import Welcome from '../../components/common/Welcome'
-import Login from '../../components/Auth/Doctor/Login'
+import LoginEnlister from '../../components/Auth/Enlister/LoginEnlister'
 
-const SigninPageDoc = () => {
-    return (
-        <div className="flex h-screen">
+const SigninPageEnlister = () => {
+  return (
+    <div className="flex h-screen">
             <div className="flex-1">
                 <Welcome/>
             </div>
             <div className="flex-1">
-                <Login/>
+                <LoginEnlister/>
             </div>
         </div>
-    )
+  )
 }
 
-export default SigninPageDoc
+export default SigninPageEnlister
