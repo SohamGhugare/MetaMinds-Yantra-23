@@ -1,11 +1,11 @@
 import Cards from "./Card";
-import "./Venues.css";
+import "./ItWorks.css";
 import bookIcon from "../../assets/bookIcon.svg";
 import enlistIcon from "../../assets/enlistIcon.svg";
 import volunteerIcon from "../../assets/volunteerIcon.svg";
 import accessIcon from "../../assets/accessIcon.svg";
 
-const Venues = () => {
+const ItWorks = () => {
   return (
     <div className="howWorks">
       <div className="title1">
@@ -52,4 +52,4 @@ const Venues = () => {
   );
 };
 
-export default Venues;
+export default ItWorks;

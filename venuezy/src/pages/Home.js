@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import Venues from "../components/cards/Venues";
 import Navbar from "../components/navbar/Navbar";
 import VenueBox from "../components/venueBox/VenueBox";
 import "./Home.css";
 import React from "react";
+import ItWorks from "../components/cards/ItWorks";
 
 const Home = () => {
   return (
@@ -21,7 +21,7 @@ const Home = () => {
         <VenueBox name="Labs" />
         <VenueBox name="Auditorium" />
       </div>
-      <Venues />
+      <ItWorks />
     </div>
   );
 };

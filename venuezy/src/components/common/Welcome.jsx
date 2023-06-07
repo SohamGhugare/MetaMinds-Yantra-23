@@ -7,33 +7,30 @@ import dot2 from "../../assets/dot_2.png";
 
 const Welcome = () => {
   return (
-    <div className=" bg-gradient-to-br from-blue-900 via-blue-600 to-blue-300">
-      {/* <img src={dot1} className="relative w-108.25 h-93 top-3 right-3" alt="logo" /> */}
-
+    <div className=" bg-gradient-to-br from-green-900 via-green-600 to-green-300">
       <div className=" flex flex-row justify-evenly items-center h-screen">
         <div className="font-sans flex flex-col items-start justify-start">
           <text className="text-6xl font-bold text-white mb-20">
             Hello, User
           </text>
-          <text className="text-9xl font-bold text-white">IHP</text>
+          <text className="text-9xl font-bold text-white">Venuzey</text>
           <text className="text-5xl font-bold text-white">Welcomes You</text>
           <List className="flex flex-col">
             <ListItem className="flex items-center space-x-2">
-              <FaHeart className="text-blue-500 text-sm" />
-              <span className="text-white">Medical records</span>
+              <FaHeart className="text-green-500 text-sm" />
+              <span className="text-white">Venue Enlisting</span>
             </ListItem>
             <ListItem className="flex items-center space-x-2">
-              <FaHeart className="text-blue-500 text-sm" />
-              <span className="text-white">Access</span>
+              <FaHeart className="text-green-500 text-sm" />
+              <span className="text-white">Venue Booking</span>
             </ListItem>
             <ListItem className="flex items-center space-x-2">
-              <FaHeart className="text-blue-500 text-sm" />
-              <span className="text-white">Management</span>
+              <FaHeart className="text-green-500 text-sm" />
+              <span className="text-white">Volunteer for a Social Cause</span>
             </ListItem>
           </List>
         </div>
       </div>
-      {/* <img src={dot2} className="relative w-108.25 h-93 left-3 bottom-3" alt="logo" /> */}
     </div>
   );
 };
