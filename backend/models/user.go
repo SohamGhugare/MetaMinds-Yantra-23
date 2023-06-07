@@ -10,5 +10,5 @@ type User struct {
 	Password       string
 	Phone          string
 	IDProof        string
-	PreviousVenues []string
+	PreviousVenues []Venue
 }

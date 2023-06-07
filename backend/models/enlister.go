@@ -2,11 +2,11 @@ package models
 
 import "gorm.io/gorm"
 
-type Volunteer struct {
+type Enlister struct {
 	gorm.Model
 	Name     string
 	Email    string
 	Password string
-	Phone    string
-	IDProof  string
+	Phone    int
+	Venues   []Venue
 }

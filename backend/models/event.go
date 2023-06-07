@@ -11,9 +11,11 @@ type Event struct {
 	gorm.Model
 	Title       string
 	Description string
-	Venue       Venue
-	Volunteers  []Volunteer
-	Timings     Time
+
+	// Relationship fields
+	Venue      Venue
+	Volunteers []Volunteer
+	Timings    Time
 }
 
 // Time model
