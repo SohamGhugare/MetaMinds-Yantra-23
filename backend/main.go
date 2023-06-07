@@ -38,6 +38,7 @@ func setupRoutes(r *gin.Engine) {
 	r.POST("/api/v1/users/login", userControllers.LoginUser)
 
 	r.POST("/api/v1/enlisters/create-enlister", enControllers.SignupEnlister)
+	r.POST("/api/v1/enlisters/login", enControllers.LoginEnlister)
 
 	r.GET("/api/v1/venues/all", venueControllers.FetchAllVenues)
 
