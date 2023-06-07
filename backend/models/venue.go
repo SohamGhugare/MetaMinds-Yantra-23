@@ -1,13 +1,31 @@
 package models
 
-import "gorm.io/gorm"
+import (
+	"time"
+
+	"gorm.io/gorm"
+)
 
 type Venue struct {
 	gorm.Model
 	Name        string
 	Description string
 	Price       int
-	Images      []string
+	Images      []Image
 	Location    string
-	OpenTimings Time
+	Timings     Time
+	EnlisterID  uint
+}
+
+type Image struct {
+	gorm.Model
+	VenueID uint
+	URL     string
+}
+
+// Time model
+type Time struct {
+	VenueID uint
+	Start   time.Time
+	End     time.Time
 }
