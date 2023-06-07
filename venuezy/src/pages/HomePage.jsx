@@ -6,9 +6,6 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import { FaHeart } from "react-icons/fa";
 import "./HomePage.css";
-// import Image from "../assets/logo.png";
-import dot1 from "../assets/dot_1.png";
-import dot2 from "../assets/dot_2.png";
 
 const HomePage = () => {
   return (
