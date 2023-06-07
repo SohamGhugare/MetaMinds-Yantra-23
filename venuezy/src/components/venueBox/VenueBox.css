@@ -1,0 +1,25 @@
+@font-face {
+    font-family: "Inter";
+    src: url("../../../../fonts/Inter-SemiBold.ttf");
+    font-weight: bold;
+    font-style: normal;
+  }
+
+.box{
+    height: 5rem;
+    width: 10rem;
+    background: var(--white);
+    box-shadow: -10px 14px 55px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter' !important;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.box:hover{
+    cursor: pointer;
+    background-color: #DEBFA4;;
+}
