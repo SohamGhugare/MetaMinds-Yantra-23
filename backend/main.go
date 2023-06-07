@@ -14,6 +14,7 @@ func init() {
 	log.SetPrefix("[VENUEZY] ")
 
 	initializers.LoadEnvVars()
+	initializers.ConnectUserDatabase()
 
 }
 
