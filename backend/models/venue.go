@@ -9,5 +9,5 @@ type Venue struct {
 	Price       int
 	Images      []string
 	Location    string
-	OpenTimings string
+	OpenTimings Time
 }
