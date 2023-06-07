@@ -7,6 +7,6 @@ type Volunteer struct {
 	Name     string
 	Email    string
 	Password string
-	Phone    string
+	Phone    int
 	IDProof  string
 }
