@@ -8,7 +8,6 @@ services:
       - "8081:8081"
     depends_on:
       - db
-
   db:
     build: db
     image: postgres:alpine
