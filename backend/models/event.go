@@ -10,7 +10,8 @@ type Event struct {
 	Title       string
 	Description string
 
+	VenueID    uint
 	Venue      Venue
-	Volunteers []Volunteer
-	Timings    Time
+	Volunteers []Volunteer `gorm:"many2many:event_volunteers;"`
+	Timings    EventTime
 }
