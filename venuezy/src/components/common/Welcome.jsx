@@ -13,7 +13,7 @@ const Welcome = () => {
           <text className="text-6xl font-bold text-white mb-20">
             Hello, User
           </text>
-          <text className="text-9xl font-bold text-white">Venuzey</text>
+          <text className="text-9xl font-bold text-white">Venuezy</text>
           <text className="text-5xl font-bold text-white">Welcomes You</text>
           <List className="flex flex-col">
             <ListItem className="flex items-center space-x-2">
