@@ -31,6 +31,7 @@ func setupRoutes(r *gin.Engine) {
 	})
 
 	r.POST("/api/v1/users/create-user", userControllers.SignupUser)
+	r.POST("/api/v1/users/login", userControllers.LoginUser)
 }
 
 // Setting up API
