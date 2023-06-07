@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 	"net/http"
-	"venuezy/controllers"
+	userControllers "venuezy/controllers/users"
 	"venuezy/database"
 	"venuezy/initializers"
 
@@ -30,7 +30,7 @@ func setupRoutes(r *gin.Engine) {
 		})
 	})
 
-	r.POST("/api/v1/users/create-user", controllers.SignupUser)
+	r.POST("/api/v1/users/create-user", userControllers.SignupUser)
 }
 
 // Setting up API
