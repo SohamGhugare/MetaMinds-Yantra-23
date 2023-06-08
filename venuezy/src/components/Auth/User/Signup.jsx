@@ -9,7 +9,9 @@ const Signup = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [phone, setPhone] = useState("");
+  const [phone, setPhone] = useState();
+  const [uid, setUid] = useState();
+
 
   const navigate = useNavigate();
 
@@ -21,6 +23,7 @@ const Signup = () => {
       email,
       phoneNumber: Number(phone),
       password,
+      uid
     };
     console.log(formData);
 
@@ -36,13 +39,7 @@ const Signup = () => {
         };
         const response = await axios.post(
           "http://localhost:8081/api/v1/users/create-user",
-          JSON.stringify({
-            name: formData.name,
-            email: formData.email,
-            phone: formData.phoneNumber,
-            password: formData.password,
-            uid: 1234
-          }),
+          formData,
           config
         );
         console.log(response)
@@ -110,14 +107,29 @@ const Signup = () => {
         </div>
         <div className="mb-4">
 
-          <label htmlFor="fullName" className="block mb-2">
+          <label htmlFor="phone" className="block mb-2">
             Phone Number:
           </label>
           <input
             type="number"
-            id="fullName"
+            id="phone"
             className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-md"
             onChange={(e) => setPhone(e.target.value)}
+
+            required
+          />
+
+        </div>
+        <div className="mb-4">
+
+          <label htmlFor="uid" className="block mb-2">
+            UID:
+          </label>
+          <input
+            type="number"
+            id="uid"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-md"
+            onChange={(e) => setUid(e.target.value)}
 
             required
           />
