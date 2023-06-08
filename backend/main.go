@@ -83,6 +83,9 @@ func main() {
 	// }
 	// initializers.DatabaseClient.Create(&event)
 
-	r.Use(cors.Default())
+	config := cors.DefaultConfig()
+	config.AllowAllOrigins = true
+	r.Use(cors.New(config))
+
 	r.Run()
 }
