@@ -2,13 +2,16 @@ import { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import userSchema from "../../../validation/userValidation"
 import { registerFunc } from "../../../services/Apis"
+import axios from "axios"
 
 const Signup = () => {
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [phone, setPhone] = useState("");
+  const [phone, setPhone] = useState();
+  const [uid, setUid] = useState();
+
 
   const navigate = useNavigate();
 
@@ -18,28 +21,42 @@ const Signup = () => {
     let formData = {
       name,
       email,
+      phoneNumber: Number(phone),
       password,
-      phoneNumber: Number(phone)
+      uid
     };
+    console.log(formData);
 
     const isValid = await userSchema.isValid(formData);
     console.log(isValid);
 
     if (isValid) {
       try {
-        console.log(formData);
         const config = {
-          "Content-type": "application/json"
+          headers: {
+            "Content-Type": "application/json"
+          }
         };
-        const data = await registerFunc(formData, config);
-        console.log(data);
-      } catch (error) {
-        console.log(error);
-      }
+        const response = await axios.post(
+          "http://localhost:8081/api/v1/users/create-user",
+          formData,
+          config
+        );
+        console.log(response)
 
+        if (response.status === 200) {
+          console.log("Signup successful");
+        } else {
+          console.log("Signup failed");
+        }
+        navigate("/home");
+
+      } catch (error) {
+        console.error("Error:", error.message);
+      }
     }
-    navigate("/home")
-  }
+  };
+
 
 
   return (
@@ -90,14 +107,29 @@ const Signup = () => {
         </div>
         <div className="mb-4">
 
-          <label htmlFor="fullName" className="block mb-2">
+          <label htmlFor="phone" className="block mb-2">
             Phone Number:
           </label>
           <input
             type="number"
-            id="fullName"
+            id="phone"
             className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-md"
             onChange={(e) => setPhone(e.target.value)}
+
+            required
+          />
+
+        </div>
+        <div className="mb-4">
+
+          <label htmlFor="uid" className="block mb-2">
+            UID:
+          </label>
+          <input
+            type="number"
+            id="uid"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-md"
+            onChange={(e) => setUid(e.target.value)}
 
             required
           />

@@ -50,6 +50,8 @@ func setupRoutes(r *gin.Engine) {
 func main() {
 	r := gin.Default()
 
+	r.Use(cors.Default())
+
 	setupRoutes(r)
 
 	venue := models.Venue{
@@ -83,6 +85,5 @@ func main() {
 	// }
 	// initializers.DatabaseClient.Create(&event)
 
-	r.Use(cors.Default())
 	r.Run()
 }
