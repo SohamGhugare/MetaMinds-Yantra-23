@@ -11,6 +11,7 @@ import (
 	"venuezy/database"
 	"venuezy/initializers"
 
+	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 )
 
@@ -38,6 +39,7 @@ func setupRoutes(r *gin.Engine) {
 	r.POST("/api/v1/users/login", userControllers.LoginUser)
 
 	r.POST("/api/v1/enlisters/create-enlister", enControllers.SignupEnlister)
+	r.POST("/api/v1/enlisters/login", enControllers.LoginEnlister)
 
 	r.GET("/api/v1/venues/all", venueControllers.FetchAllVenues)
 
@@ -80,5 +82,7 @@ func main() {
 	// 	VenueID:     1,
 	// }
 	// initializers.DatabaseClient.Create(&event)
+
+	r.Use(cors.Default())
 	r.Run()
 }
