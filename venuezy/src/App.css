@@ -26,6 +26,21 @@
   color: white;
 }
 
+.loading-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f9f9f9;
+}
+
+.loading-text {
+  font-size: 36px;
+  font-family: 'Pacifico' !important;
+  color: #555555;
+  animation: loadingAnimation 1s ease-in-out infinite;
+}
+
 .App-link {
   color: #61dafb;
 }
