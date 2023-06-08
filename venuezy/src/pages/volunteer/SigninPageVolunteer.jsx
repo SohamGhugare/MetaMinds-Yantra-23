@@ -1,18 +1,18 @@
 import React from 'react'
-import Signup from '../../components/Auth/Doctor/Signup'
 import Welcome from '../../components/common/Welcome'
+import LoginVolunteer from '../../components/Auth/Volunteer/LoginVolunteer'
 
-const SignupPageDoc = () => {
+const SigninPageVolunteer = () => {
   return (
     <div className="flex h-screen">
             <div className="flex-1">
                 <Welcome/>
             </div>
             <div className="flex-1">
-                <Signup/>
+                <LoginVolunteer/>
             </div>
         </div>
   )
 }
 
-export default SignupPageDoc
+export default SigninPageVolunteer
