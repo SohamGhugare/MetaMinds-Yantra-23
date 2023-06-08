@@ -1,0 +1,18 @@
+.formOuter{
+    border: 1px solid black;
+    width: 80vw;
+    margin: auto;
+    padding: 2rem;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.formOuter label{
+    margin-top: 2rem;
+}
+
+.formOuter input{
+    border: 1px solid black;
+}
