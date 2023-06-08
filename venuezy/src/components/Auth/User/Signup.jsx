@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import userSchema from "../../../validation/userValidation"
 import { registerFunc } from "../../../services/Apis"
+import axios from "axios"
 
 const Signup = () => {
 
@@ -18,28 +19,47 @@ const Signup = () => {
     let formData = {
       name,
       email,
+      phoneNumber: Number(phone),
       password,
-      phoneNumber: Number(phone)
     };
+    console.log(formData);
 
     const isValid = await userSchema.isValid(formData);
     console.log(isValid);
 
     if (isValid) {
       try {
-        console.log(formData);
         const config = {
-          "Content-type": "application/json"
+          headers: {
+            "Content-Type": "application/json"
+          }
         };
-        const data = await registerFunc(formData, config);
-        console.log(data);
-      } catch (error) {
-        console.log(error);
-      }
+        const response = await axios.post(
+          "http://localhost:8081/api/v1/users/create-user",
+          JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phoneNumber,
+            password: formData.password,
+            uid: 1234
+          }),
+          config
+        );
+        console.log(response)
 
+        if (response.status === 200) {
+          console.log("Signup successful");
+        } else {
+          console.log("Signup failed");
+        }
+        navigate("/home");
+
+      } catch (error) {
+        console.error("Error:", error.message);
+      }
     }
-    navigate("/home")
-  }
+  };
+
 
 
   return (
