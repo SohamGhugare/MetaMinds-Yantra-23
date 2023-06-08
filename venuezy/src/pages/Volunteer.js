@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "../components/navbar/Navbar";
 
-const Enlist = () => {
+const Volunteer = () => {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
@@ -121,4 +121,4 @@ const Enlist = () => {
   );
 };
 
-export default Enlist;
+export default Volunteer;

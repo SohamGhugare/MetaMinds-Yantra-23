@@ -11,6 +11,7 @@ import Home from "./pages/Home";
 import Hall from "./pages/Hall";
 import Enlist from "./pages/Enlist";
 import "./App.css";
+import Volunteer from "./pages/Volunteer";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -46,6 +47,7 @@ function App() {
             <Route path="/home" element={<Home />} />
             <Route path="/halls" element={<Hall />} />
             <Route path="/enlist" element={<Enlist />} />
+            <Route path="/volunteer" element={<Volunteer />} />
           </Routes>
         </>
       )}
