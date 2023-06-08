@@ -5,6 +5,8 @@ const userSchema = yup.object({
   email: yup.string().email().required(),
   password: yup.string().required(),
   phoneNumber: yup.number().required(),
+  uid: yup.number().required(),
+
 });
 
 export default userSchema;

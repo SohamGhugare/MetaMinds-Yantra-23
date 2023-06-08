@@ -4,6 +4,7 @@ import bookIcon from "../../assets/bookIcon.svg";
 import enlistIcon from "../../assets/enlistIcon.svg";
 import volunteerIcon from "../../assets/volunteerIcon.svg";
 import accessIcon from "../../assets/accessIcon.svg";
+import { Link } from "react-router-dom";
 
 const ItWorks = () => {
   return (
@@ -13,18 +14,20 @@ const ItWorks = () => {
           How it <span style={{ color: "#DEBFA4" }}>Works</span>
         </h1>
         <p className="titleText">
-          Don’t Worry, We’ll keep it very simple. Get started
+          Don't Worry, We'll keep it very simple. Get started
         </p>
       </div>
       <div className="speakers">
         <div className="cards">
-          <div data-aos="flip-up" data-aos-delay="300">
-            <Cards
-              name="Enlist your Venue"
-              img={enlistIcon}
-              designation="Enlist your free space for social good."
-            />
-          </div>
+          <Link to={"/enlist"}>
+            <div data-aos="flip-up" data-aos-delay="300">
+              <Cards
+                name="Enlist your Venue"
+                img={enlistIcon}
+                designation="Enlist your free space for social good."
+              />
+            </div>
+          </Link>
           <div data-aos="flip-up" data-aos-delay="450">
             <Cards
               name="Book a Venue"
