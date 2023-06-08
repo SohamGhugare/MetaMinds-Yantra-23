@@ -11,6 +11,7 @@ import (
 	"venuezy/database"
 	"venuezy/initializers"
 
+	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 )
 
@@ -81,5 +82,7 @@ func main() {
 	// 	VenueID:     1,
 	// }
 	// initializers.DatabaseClient.Create(&event)
+
+	r.Use(cors.Default())
 	r.Run()
 }
