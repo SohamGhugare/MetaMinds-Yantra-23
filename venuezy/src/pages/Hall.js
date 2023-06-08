@@ -52,6 +52,7 @@ const Hall = () => {
       .then((response) => response.json())
       .then((data) => {
         setVenues(data);
+        console.log(data);
       })
       .catch((error) => {
         console.error("Error:", error);

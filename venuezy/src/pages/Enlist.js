@@ -30,45 +30,49 @@ const Enlist = () => {
     <div>
       <Navbar />
       <form onSubmit={handleSubmit} style={{ border: "1px solid black" }}>
-        <label style={{ border: "1px solid black" }}>
+        <label>
           Venue Name:
           <input
             type="text"
             value={venueName}
             onChange={(e) => setVenueName(e.target.value)}
             required
+            style={{ border: "1px solid black" }}
           />
         </label>
         <br />
 
-        <label style={{ border: "1px solid black" }}>
+        <label>
           Venue Address:
           <input
             type="text"
             value={venueAddress}
             onChange={(e) => setVenueAddress(e.target.value)}
             required
+            style={{ border: "1px solid black" }}
           />
         </label>
         <br />
 
-        <label style={{ border: "1px solid black" }}>
+        <label>
           Venue City:
           <input
             type="text"
             value={venueCity}
             onChange={(e) => setVenueCity(e.target.value)}
             required
+            style={{ border: "1px solid black" }}
           />
         </label>
         <br />
 
-        <label style={{ border: "1px solid black" }}>
+        <label>
           Description:
           <textarea
             value={description}
             onChange={(e) => setDescription(e.target.value)}
             required
+            style={{ border: "1px solid black" }}
           />
         </label>
         <br />

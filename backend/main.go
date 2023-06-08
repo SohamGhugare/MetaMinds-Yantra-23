@@ -52,19 +52,19 @@ func main() {
 
 	setupRoutes(r)
 
-	// venue := models.Venue{
-	// 	Name:        "Lawn",
-	// 	Description: "50x50 metres lawn",
-	// 	Price:       3500,
-	// 	Location:    "Balewadi High Street, Pune",
-	// 	EnlisterID:  1,
-	// 	Timings: models.VenueTime{
-	// 		Start: time.Now(),
-	// 		End:   time.Now().Add(time.Hour * 12),
-	// 	},
-	// }
-	// initializers.DatabaseClient.Create(&venue)
-	// log.Println("created lawn")
+	venue := models.Venue{
+		Name:        "Lawn",
+		Description: "50x50 metres lawn",
+		Price:       3500,
+		Location:    "Balewadi High Street, Pune",
+		EnlisterID:  1,
+		Timings: models.VenueTime{
+			Start: time.Now(),
+			End:   time.Now().Add(time.Hour * 12),
+		},
+	}
+	initializers.DatabaseClient.Create(&venue)
+	log.Println("created lawn")
 
 	// hash, _ := utility.GenerateHash("test123")
 	// vol := models.Volunteer{
