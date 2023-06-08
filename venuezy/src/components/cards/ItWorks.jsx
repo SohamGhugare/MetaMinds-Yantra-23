@@ -28,13 +28,16 @@ const ItWorks = () => {
               />
             </div>
           </Link>
-          <div data-aos="flip-up" data-aos-delay="450">
-            <Cards
-              name="Book a Venue"
-              img={bookIcon}
-              designation="Get the ideal venue for your Community Events."
-            />
-          </div>
+
+          <Link to={"/halls"}>
+            <div data-aos="flip-up" data-aos-delay="450">
+              <Cards
+                name="Book a Venue"
+                img={bookIcon}
+                designation="Get the ideal venue for your Community Events."
+              />
+            </div>
+          </Link>
           <div data-aos="flip-up" data-aos-delay="600">
             <Cards
               name="Become a Volunteer "
